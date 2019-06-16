@@ -27,7 +27,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     
-    if message.content.startswith("+AH4-Hewp"):
+    if message.content.startswith("~Hewp"):
         help = """T-thanks fow downwoading the OwO-oifiew
 To use this bot pwease type +AH4-OwO Youw message hewe
 To suppowt futuwe pwojects and weawn how to make something wike this pwease visit:
