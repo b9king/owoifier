@@ -34,7 +34,7 @@ To suppowt futuwe pwojects and weawn how to make something wike this pwease visi
 https://www.patreon.com/b9king
 """
         
-        await client.send_message(message.channel,help)
+        await message.channel.send(help)
     
     if message.content.startswith("~OwO"):
         jesus = message.channel
@@ -182,7 +182,7 @@ https://www.patreon.com/b9king
             y+= " " + random.choice(faces)
         
         
-        await client.send_message(jesus,y)
+        await jesus.send(y)
                 
    
 client.run('NTg5Njc1MDc2OTQ1OTY5MTUy.XQXIWg.4ZFKB3J-xjHWrGbfhvbiJ_FoMFo') 
