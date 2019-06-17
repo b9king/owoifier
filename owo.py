@@ -14,15 +14,31 @@ async def on_ready():
     print(client.user.id)
     print('-----')
 
-#@client.event
-#async def on_member_join(member):
-    #message1 = """@everyone Please welcome {} to the server!
-#Glory to Socialist Republic of New Massachusetts""".format(member)
+@client.event
+async def on_guild_join(guild):
     
-    #channel = member.server.get_channel("583503890721406987")
-    #role = discord.utils.get(member.server.roles, name = "FOREIGN GUEST")
-    #await client.send_message(channel,message1)
-    #await client.add_roles(member,role)
+    name = "OwOifiew"
+    command1 = "**~OwO** *your message here*"
+    command2 = "~Hewp"
+    
+    join_message = """H-hewwo {}
+I'm {} (。U⁄ ⁄ω⁄ ⁄ U。) cweated by b9king#6857
+My commands awe:
+{}
+{}
+You can suppowt my cweatow hewe:  ( °꒳° ) https://www.patreon.com/b9king
+    """.format(guild.name,name,command1,command2)    
+    
+    x = guild.channels
+    y = False
+    
+    for i in x:
+        if i.permissions_for(guild.me).send_messages and not y:
+            print(i)
+            x = i
+            break
+    await x.send(join_message)
+
     
 @client.event
 async def on_message(message):
