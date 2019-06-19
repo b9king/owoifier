@@ -39,9 +39,37 @@ You can suppowt my cweatow hewe:  ( °꒳° ) https://www.patreon.com/b9king
             break
     await x.send(join_message)
 
+    #_________________________________________________________________
+#________________Help Command_____________________________________
+    elif message.content.startswith("(debug 124 owo)"):
+        x = message.content.replace("(debug 124 owo)","")
+        await client.change_presence(status=discord.Status.online, activity=discord.Game(x))
     
+    
+    elif message.content == "~Help OwO":
+        name = "**OwOifier**"
+        command1 = "**~OwO (your message here)**"
+        command2 = "**~Conditions** (us zipcode)"
+        command3 = "**~Forecast** (us zipcode)"
+        command4 = "**~Alerts** (us zipcode)"
+        
+        Helpmessage = """
+        **Thanks for adding me to {}**!
+        I-i take any message you give me and tuwn it into an OwO message
+        I-i am abwe to intewact with othew bots who output ~OwO the at the stawts of theiw message (⁄˘⁄ ⁄ ω⁄ ⁄ ˘⁄)♡
+
+        My commands are:
+        {}
+        **Click the embed to support my creator**
+        """.format(message.guild.name,command1)
+        
+        embed=discord.Embed(title="OwOifier Help", url="https://www.patreon.com/b9king", description= Helpmessage, color=0x00ffff)
+        embed.set_thumbnail(url="https://files.catbox.moe/g2i27n.png")
+        await message.channel.send(embed=embed)     
 @client.event
 async def on_message(message):
+    
+    
     
     if message.content.startswith("~Hewp"):
         help = """T-thanks fow downwoading the OwO-oifiew
@@ -52,7 +80,7 @@ https://www.patreon.com/b9king
         
         await message.channel.send(help)
     
-    if message.content.startswith("~OwO"):
+    if message.content.startswith("~OwO") and message.author.id != self.user.id:
         jesus = message.channel
         message = message.content.replace("~OwO ", "" )
         faces = ['(ᵘʷᵘ)',
