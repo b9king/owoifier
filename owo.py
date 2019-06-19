@@ -39,7 +39,19 @@ You can suppowt my cweatow hewe:  ( °꒳° ) https://www.patreon.com/b9king
             break
     await x.send(join_message)
 
-    #_________________________________________________________________
+  
+@client.event
+async def on_message(message):
+    
+    
+    
+    if message.content.startswith("~Hewp"):
+        help = """T-thanks fow downwoading the OwO-oifiew
+To use this bot pwease type +AH4-OwO Youw message hewe
+To suppowt futuwe pwojects and weawn how to make something wike this pwease visit:
+https://www.patreon.com/b9king
+"""
+         #_________________________________________________________________
 #________________Help Command_____________________________________
     elif message.content.startswith("(debug 124 owo)"):
         x = message.content.replace("(debug 124 owo)","")
@@ -65,18 +77,7 @@ You can suppowt my cweatow hewe:  ( °꒳° ) https://www.patreon.com/b9king
         
         embed=discord.Embed(title="OwOifier Help", url="https://www.patreon.com/b9king", description= Helpmessage, color=0x00ffff)
         embed.set_thumbnail(url="https://files.catbox.moe/g2i27n.png")
-        await message.channel.send(embed=embed)     
-@client.event
-async def on_message(message):
-    
-    
-    
-    if message.content.startswith("~Hewp"):
-        help = """T-thanks fow downwoading the OwO-oifiew
-To use this bot pwease type +AH4-OwO Youw message hewe
-To suppowt futuwe pwojects and weawn how to make something wike this pwease visit:
-https://www.patreon.com/b9king
-"""
+        await message.channel.send(embed=embed)   
         
         await message.channel.send(help)
     
