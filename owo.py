@@ -81,7 +81,7 @@ https://www.patreon.com/b9king
         
         await message.channel.send(help)
     
-    if message.content.startswith("~OwO") and message.author.id != self.user.id:
+    if message.content.startswith("~OwO") and message.author.id != "589675076945969152":
         jesus = message.channel
         message = message.content.replace("~OwO ", "" )
         faces = ['(ᵘʷᵘ)',
