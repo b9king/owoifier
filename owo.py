@@ -13,6 +13,9 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('-----')
+    print('Servers connected to:')
+    for server in client.servers:
+        print(server.name)
 
 @client.event
 async def on_guild_join(guild):
@@ -55,11 +58,7 @@ https://www.patreon.com/b9king
 #________________Help Command_____________________________________
 
 
-    elif message.content == "dabatronix please print the thing mister I am asking nicely!":
-        messag = "I am in {} servers".format(len(client.servers))
-        for i in client.servers:
-            messag += "\n" + i.name
-        await message.channel.send(messag)
+
     elif message.content.startswith("(debug 124 owo)"):
         x = message.content.replace("(debug 124 owo)","")
         await client.change_presence(status=discord.Status.online, activity=discord.Game(x))
