@@ -17,8 +17,13 @@ async def on_ready():
     for server in client.servers:
         print(server.name)
 
+        
+        
 @client.event
 async def on_guild_join(guild):
+    allowedID = [536447514447183892]
+    if guild.id not in allowedID:
+        await guild.leave()
     
     name = "OwOifiew"
     command1 = "**~OwO** *your message here*"
